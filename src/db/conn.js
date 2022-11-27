@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-//var dbURI = '';
+var dbURI = '';
 
 if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGOLAB_URI;
