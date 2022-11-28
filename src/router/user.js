@@ -30,8 +30,8 @@ router.get("/users" , async(req , res)=>{
 //handling get request for individual
 router.get("/users/:id" , async(req , res)=>{
     try{
-        const _id = req.params.id;
-      const getuser = await userList.findById({fname : _id});
+        const fname = req.params.id;
+      const getuser = await userList.findById({fname : fname});
        res.send(getuser);
     }catch(e){
         res.status(400).send(e);
