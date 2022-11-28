@@ -31,7 +31,7 @@ router.get("/users" , async(req , res)=>{
 router.get("/users/:id" , async(req , res)=>{
     try{
         const _id = req.params.id;
-      const getuser = await userList.findById({_id : _id});
+      const getuser = await userList.findById({fname : _id});
        res.send(getuser);
     }catch(e){
         res.status(400).send(e);
