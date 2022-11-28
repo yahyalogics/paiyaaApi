@@ -30,7 +30,7 @@ router.get("/users" , async(req , res)=>{
 //handling get request for individual
 router.get("/users/:id" , async(req , res)=>{
     try{
-        const fname = req.params.id;
+        const fname = req.params.fname;
       const getuser = await userList.findById({fname : fname});
        res.send(getuser);
     }catch(e){
