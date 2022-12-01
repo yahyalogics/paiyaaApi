@@ -39,7 +39,11 @@ const userSchema = new mongoose.Schema({
         address:{
             type:Array ,
         } ,
-
+        img:
+        {
+            data: Buffer,
+            contentType: String
+        },
 
 })
 //we are creating a new collection

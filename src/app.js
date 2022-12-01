@@ -10,3 +10,4 @@ app.use(router);
 app.listen(port , ()=> {
     console.log('API is Live on port' , port);
 })
+// Step 5 - set up multer for storing uploaded files

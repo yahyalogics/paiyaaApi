@@ -3,6 +3,8 @@ var dbURI = '';
 
 if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGOLAB_URI;
+} else {
+    dbURI = 'mongodb://localhost:27017';
 }
 mongoose.connect(dbURI , {
     //useCreateIndex:true,
