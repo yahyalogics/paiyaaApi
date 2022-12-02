@@ -10,7 +10,7 @@ router.post("/users" , async(req , res)=>{
         console.log(req.body);
         const insertuser = await addinguser.save();
         res.status(201).send(insertuser);
-        console.log(req.file);
+
     }catch(e){
         res.status(400).send(e);
 
