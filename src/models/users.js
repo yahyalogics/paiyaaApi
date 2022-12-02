@@ -39,10 +39,7 @@ const userSchema = new mongoose.Schema({
         address:{
             type:Array ,
         } ,
-        img:
-        {
-            type:String ,
-        },
+
 
 })
 //we are creating a new collection
