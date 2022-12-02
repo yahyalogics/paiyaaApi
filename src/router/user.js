@@ -3,19 +3,8 @@ require("../db/conn");
 const router = new express.Router();
 const userList = require("../models/users");
 router.use(express.json());
-var multer = require('multer');
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, './public/images')
-    },
-    filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-      cb(null, uniqueSuffix + file.originalname)
-    }
-  })
-var upload = multer({storage : storage})
 //we will handle post
-router.post("/users" ,upload.single('avatar'), async(req , res)=>{
+router.post("/users" , async(req , res)=>{
     try{
         const addinguser = new userList(req.body)
         console.log(req.body);
