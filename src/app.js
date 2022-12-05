@@ -1,4 +1,5 @@
 const express = require("express");
+const multer = require('multer');
 require("./db/conn");
 //const userList = require('../src/models/users');
 const router = require("./router/user");
