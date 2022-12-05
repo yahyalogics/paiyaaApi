@@ -15,7 +15,7 @@ var storage = multer.diskStorage({
 })
 
 var upload = multer({ storage: storage })
-router.post("/users" , upload.single('myImage'),async(req , res)=>{
+router.post("/users" ,async(req , res)=>{
     try{
         const addinguser = new userList(req.body)
         console.log(req.body);
