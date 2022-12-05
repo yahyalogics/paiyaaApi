@@ -4,17 +4,7 @@ const router = new express.Router();
 const userList = require("../models/users");
 router.use(express.json());
 //we will handle post
-const fs = require('file-system');
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './public/images')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-})
 
-var upload = multer({ storage: storage })
 router.post("/users" ,async(req , res)=>{
     try{
         const addinguser = new userList(req.body)
