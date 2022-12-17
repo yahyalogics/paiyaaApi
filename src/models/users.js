@@ -42,6 +42,12 @@ const userSchema = new mongoose.Schema({
     },
     cnicf: {
         type: String,
+    },
+    cnicb: {
+        type: String,
+    },
+    utility: {
+        type: String,
     }
 });
 //we are creating a new collection
