@@ -39,6 +39,9 @@ const userSchema = new mongoose.Schema({
     },
     image: {
         type: String,
+    },
+    cnicf: {
+        type: String,
     }
 });
 //we are creating a new collection
