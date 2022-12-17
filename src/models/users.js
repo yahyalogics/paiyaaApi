@@ -40,6 +40,15 @@ const userSchema = new mongoose.Schema({
     image: {
         type: String,
     },
+    cnicf: {
+        type: String,
+    },
+    cnicb: {
+        type: String,
+    },
+    utility: {
+        type: String,
+    },
 });
 //we are creating a new collection
 const User = new mongoose.model("User", userSchema);
