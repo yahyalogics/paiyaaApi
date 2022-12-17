@@ -39,6 +39,7 @@ router.post("/uploadUser", upload.single("image"), async function (req, res, nex
     res.send(user);
   });
 
+
 //handling get request
 router.get("/users" , async(req , res)=>{
     try{
