@@ -1,9 +1,10 @@
+const cors = require('cors')
 const express = require("express");
 require("../db/conn");
 const router = new express.Router();
 const User = require("../models/users");
 router.use(express.json());
-
+router.use(cors())
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination: (req, file, callBack) => {
