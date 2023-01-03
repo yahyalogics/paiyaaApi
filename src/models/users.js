@@ -48,7 +48,10 @@ const userSchema = new mongoose.Schema({
     },
     utility: {
         type: String,
-    }
+    },
+    messages: {
+        type: Array,
+    },
 });
 //we are creating a new collection
 const User = new mongoose.model("User", userSchema);
